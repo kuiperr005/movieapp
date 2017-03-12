@@ -1,0 +1,36 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	text-size-adjust: 100%;
+	font-smoothing: antialiased;
+}
+p {
+	margin-top:1em;
+}
+figure {
+	margin: 1em 0 1em 0;
+}
+ul {
+	list-style-type: none;
+}
+input {
+	border: 1px solid #cccccc;
+}
+.subtitle {
+	color: $canvas;
+	display:block;
+	padding: 1em 1em;
+	background-color: #033649;
+}
+body, html {
+	overflow-x:hidden;
+}

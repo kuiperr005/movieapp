@@ -1,0 +1,87 @@
+body > aside {
+	margin-left: -300px;
+	position:fixed;
+	top: 0;
+	left:0;
+	background: $tint-brown-pale;
+	transition: 0.3s all ease-in-out;
+	width:300px;
+	height:100%;
+	text-transform: uppercase;
+	header {
+		background-color: $content-blue-light;
+		padding: 1.4em;
+		h1 {
+			color: $canvas;
+			margin:0;
+			.icon {
+				font-size: 1.5em;
+				margin-top: -0.3em;
+			}
+		}
+	}
+	h2 {
+		padding: 1em;
+		margin:0;
+		background-color: #CDB380;
+		color: $canvas;
+	}
+	section {
+		padding: 1.5em;
+	}
+	ul, li, a {
+		color: $content;
+		line-height: 1.95;
+	}
+	&:after {
+		content: "";
+		display:block;
+		height: 100%;
+		width:1em;
+		background:rgba(0,0,0,.2);
+		position:absolute;
+		right:0;
+		top:0;
+	}
+}
+body > main {
+	transition: 0.3s transform ease-in-out;
+}
+body.active > main {
+	transform: translate3D(300px,0,0);
+}
+body.active > aside {
+	margin-left: 0px;
+}
+body > header {
+	width:100%;
+	background-color: $content-blue;
+	padding: 1em 1.5em;
+	transition: 0.3s transform ease-in-out;
+	text-align:center;
+	position:relative;
+	.menutoggle {
+		color: $canvas;
+		text-transform: uppercase;
+		font-size: 1.3em;
+		font-weight: 600;
+		position: absolute;
+		left: 0;
+		top: 1em;
+		padding-left: 1.5em;
+		.icon {
+			font-size: 1.7em;
+			color: $canvas;
+		}
+	}
+	h1 {
+		display:inline-block;
+		text-align:center;
+		margin:0 auto;
+		color: $canvas;
+		font-size: 1.2em;
+	}
+}
+body.active > header {
+	transform: translate3D(300px,0,0);
+}

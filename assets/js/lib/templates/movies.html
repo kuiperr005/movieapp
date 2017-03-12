@@ -1,0 +1,26 @@
+<section data-route="movies">
+	<h2 class="subtitle">All Movies</h2>
+	<section id="movielist">
+		<% _.each(movies, function(movie) { %>
+		<article id="<%= movie.id %>">
+			<figure style="background-image: url('<%= movie.cover %>');">
+				<a href="#/movies/<%= movie.id %>"><h3 class="title"><%= movie.title %></h3></a>
+			</figure>
+			<main>
+				<header>
+					<p class="releaseDate">Released on: <time><%= movie.release_date %></time></p>
+					<% if(!_.isEmpty(movie.reviews)) { %>
+					<p class="averageReview"><span><%= movie.reviews %></span></p>
+					<% } %>
+					<p class="genres">Genres:
+						<% _.each(movie.genres, function(genre, i) { %>
+						<a href="#/movies/genre/<%= genre %>"><%= genre %></a><% if(i < movie.genres.length -1) { %>, <% } %>
+						<% }); %>
+					</p>
+				</header>
+				<p class="description"><%= movie.simple_plot %></p>
+			</main>
+		</article>
+		<% }); %>
+	</section>
+</section>

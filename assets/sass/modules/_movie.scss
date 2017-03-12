@@ -1,0 +1,153 @@
+body > main {
+	overflow:hidden;
+}
+article {
+	figure {
+		position:relative;
+		background-size: cover;
+		background-repeat:no-repeat;
+		background-position: center center;
+		margin:0;
+		h3, h1 {
+			padding-top: 6em;
+			color: $canvas;
+			z-index:20;
+			position:relative;
+			padding-left:1em;
+			padding-bottom:1em;
+			margin: 0;
+		}
+		&:before {
+			@include filter-gradient(#a60000, #000000, vertical); // IE6-9
+			@include background-image(linear-gradient(top,  rgba(0,0,0,0) 18%,rgba(0,0,0,0.65) 77%));
+			top: 0;
+			width: 100%;
+			left: 0;
+			height: 100%;
+			content:"";
+			position: absolute;
+		}
+	}
+	main {
+		overflow:hidden;
+		color: $content;
+		position:relative;
+		bottom:0;
+		left:0;
+		background-color: $canvas;
+		z-index: 10;
+		width:100%;
+		padding: 2em 3em 2em 1.5em;
+		a {
+			position:relative;
+			bottom: 0;
+			left:0;
+			color: $tint-green;
+			text-decoration:none;
+			font-weight: 600;
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+		.releaseDate {
+			margin-top: 0;
+			font-weight: 300;
+		}
+		.averageReview {
+			position:absolute;
+			top:0;
+			right:0;
+			padding:1em;
+			margin-top: 0;
+			background-color: $primary;
+			color: $canvas;
+		}
+		.genres {
+			margin-top: 0;
+			font-weight: 300;
+		}
+	}
+	footer {
+		background-color: $canvas-pale;
+		.director {
+			padding: 1.5em;
+			background-color: $tint-brown;
+			h2 {
+				color: $canvas;
+			}
+			p {
+				margin-top: 0;
+				color: $canvas;
+			}
+		}
+		.actors {
+			padding: 1.5em;
+			background-color: $tint-brown-pale;
+			color: $canvas;
+			h3, h2 {
+				color: $content-dark;
+				font-weight: 600;
+			}
+			p {
+				margin-top: 0;
+				color: $content;
+			}
+			article {
+				padding: 1.5em 0;
+				border-bottom: 1px solid $content;
+				margin-left: 0;
+				&:last-child {
+					border-bottom: 0;
+				}
+				h3 {
+					font-size: 1.2em;
+				}
+				@extend %grid;
+				.profile-img {
+					@extend %grid__item;
+					@extend %one-eighth;
+					padding-left:0;
+				}
+				.content {
+					@extend %grid__item;
+					@extend %seven-eighths;
+					p {
+						font-weight: 300;
+					}
+				}
+			}
+		}
+	}
+}
+#movielist {
+	padding: 2em 1.5em;
+	background: $canvas-pale;
+	@extend %grid;
+}
+body.active #movielist {
+	// margin-left:0;
+}
+#movielist article {
+	margin-bottom: 2em;
+	transition: 0.3s all ease-in-out;
+	@extend %grid__item;
+	@extend %palm--one-whole;
+	@extend %lap--one-half;
+	@extend %desk--one-third;
+}
+article.single {
+	@extend %grid;
+	margin-left:0;
+	h1 {
+		letter-spacing: 0.01em;
+	}
+	main {
+		@extend %grid__item;
+		@extend %desk--two-thirds;
+	}
+	footer {
+		padding-left:0;
+		@extend %grid__item;
+		@extend %desk--one-third;
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "WebApp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A beautiful WebApp for FED2",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "WebApp",
+    "Javascript",
+    "Grunt",
+    "Portfolio"
+  ],
+  "author": "Ruben Kuipers",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.9.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-autoprefixer": "^0.8.1",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "underscore": "^1.7.0",
+    "promise": "^6.0.0"
+  }
+}

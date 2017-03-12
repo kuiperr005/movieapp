@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*------------------------------------*\
+   Vendor mixin/function libraries
+\*------------------------------------*/
+@import "compass";
+@import "lib/normalize";
+@import "lib/grids";
+@import "lib/mediaqueries";
+@import "lib/extends";
+
+/*------------------------------------*\
+   Global setup variables
+\*------------------------------------*/
+
+@import "setup/colors";
+@import "setup/globals";
+@import "setup/typography";
+
+/*------------------------------------*\
+   Header module
+\*------------------------------------*/
+
+@import "modules/header";
+
+/*------------------------------------*\
+   Main module
+\*------------------------------------*/
+
+@import "modules/movie";
+
+/*------------------------------------*\
+   Splash module
+\*------------------------------------*/
+
+@import "modules/splash";
+
+/*------------------------------------*\
+   Modules - Mediaqueries
+\*------------------------------------*/
+
+@import "modules/mediaqueries";

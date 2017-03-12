@@ -1,0 +1,43 @@
+.splash {
+	background-color: $primary;
+	position:absolute;
+	z-index:999;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display:table;
+	transition: 0.5s transform ease-in-out;
+	.logo {
+		font-size: 9em;
+		margin:0 auto;
+		padding:0;
+		display:block;
+		height:1.3em;
+	}
+	.wrapper {
+		letter-spacing: 0.01em;
+		display:table-cell;
+		vertical-align:middle;
+		text-align:center;
+		top: -2em;
+	}
+	h1 {
+		font-size: 2.5em;
+		margin:0;
+	}
+	h2 {
+		font-size: 1.5em;
+		font-weight: 300;
+	}
+	.ion-loading-c {
+		margin-top:2em;
+		padding:0;
+	}
+	h1,h2,span {
+		color: $canvas;
+	}
+	&.out {
+		transform: translate3d(-100%, 0, 0);
+	}
+}

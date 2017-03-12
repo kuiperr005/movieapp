@@ -1,0 +1,44 @@
+<section data-route="movie">
+	<article class="single" id="<%= id %>">
+		<figure style="background-image: url('<%= cover %>');">
+			<h1 class="title"><%= title %></h1>
+		</figure>
+		<main>
+			<header>
+				<p class="releaseDate">Released on: <time><%= release_date %></time></p>
+				<p class="averageReview"><span><%= reviews %></span></p>
+				<p class="genres">Genres:
+					<% _.each(genres, function(genre, i) { %>
+					<a href="#/movies/genre/<%= genre %>"><%= genre %></a><% if(i < genres.length -1) { %>, <% } %>
+					<% }); %>
+				</p>
+			</header>
+
+			<p class="description"><%= plot %></p>
+		</main>
+		<footer>
+			<% _.each(directors, function(director) { %>
+			<article class="director" id="director_id-<%= director.id %>">
+			<h2>Director</h2>
+			<p>Naam: <%= director.name %></p>
+			</article>
+			<% }); %>
+			<section class="actors">
+				<h2>Acteurs:</h2>
+				<% _.each(actors, function(actor, i) { %>
+				<article id="author-<%= actor.id %>">
+					<% if(!_.isEmpty(actor.url_photo)) { %>
+					<div class="profile-img">
+						<img src="<%= actor.url_photo%>" alt="<%=actor.actor_name %>" />
+					</div>
+					<% } %>
+					<div class="content">
+						<h3><%= actor.actor_name %></h3>
+						<p class="character">Character: <%= actor.character %></p>
+					</div>
+				</article>
+				<% }); %>
+			</section>
+		</footer>
+	</article>
+</section>
